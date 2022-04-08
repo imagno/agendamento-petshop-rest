@@ -42,7 +42,7 @@ class Atendimento {
         } else {
           res
             .status(201)
-            .json(resultados);
+            .json(atendimento);
         }
       });
     }
@@ -96,7 +96,7 @@ class Atendimento {
       } else {
         res
           .status(200)
-          .json(resultado);
+          .json({...valores, id});
       }
     });
   }
@@ -112,7 +112,7 @@ class Atendimento {
       } else {
         res
           .status(200)
-          .json(resultado);
+          .json({id});
       }
     });
   }
