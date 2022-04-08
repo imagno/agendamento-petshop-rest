@@ -12,6 +12,7 @@
   "dependencies": {
     "consign": "^0.1.6",
     "express": "^4.17.3",
+    "moment": "^2.29.2",
     "mysql": "github:mysqljs/mysql",
     "mysql2": "^2.3.3"
   },
