@@ -3,6 +3,7 @@ class Entidades {
     this.conexao = conexao;
 
     this.criarAtendimentos();
+    this.criarPets();
   }
 
   criarAtendimentos() {
@@ -13,6 +14,18 @@ class Entidades {
         console.log(erro);
       } else {
         console.log('Entidade criada com sucesso');
+      }
+    });
+  }
+
+  criarPets() {
+    const query = 'CREATE TABLE IF NOT EXISTS pets (id int NOT NULL AUTO_INCREMENT, nome varchar(50), imagem varchar(200), PRIMARY KEY (id))';
+
+    this.conexao.query(query, erro => {
+      if(erro) {
+        console.log(erro);
+      } else {
+        console.log('Tabela pets foi criada com sucesso')
       }
     });
   }
