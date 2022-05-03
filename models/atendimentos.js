@@ -55,19 +55,7 @@ class Atendimento {
   }
 
   lista(res) {
-    const sql = 'SELECT * FROM atendimentos';
-
-    conexao.query(sql, (erro, resultados) => {
-      if(erro) {
-        res
-          .status(400)
-          .json(erro);
-      } else {
-        res
-          .status(200)
-          .json(resultados);
-      }
-    });
+    return repositorio.lista();
   }
 
   buscaPorId(id, res) {
